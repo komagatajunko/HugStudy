@@ -10,15 +10,14 @@
 }
 /* header */
 .header {
-    height: 100px;
+    /*height: 100px; 高さが変わってもいいよう削除 */
     background-color: #ffce7a;
+    padding:20px;
 }
 .header-inner {
     float:right;
     width: 160px;
     height: 60px;
-    margin-right: 20px;
-    margin-top: 20px;
     background-color: white;
 }
 .header-in1 {
@@ -52,9 +51,8 @@
 }
 .right-inner {
     width: 150px;
-    height: 170px;
-    margin-top: 40px;
-    margin-left: 40px;
+    /*height: 170px; 高さが変わってもいいよう削除 */
+    margin:40px 60px 40px 40px;
 }
 .right-in1 {
     width: 140px;

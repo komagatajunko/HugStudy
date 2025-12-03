@@ -22,9 +22,10 @@
         height: 100px;
     }
     .right {
-        width: 100%;
+        width:100%;
+        padding: 20px 0 0 30px;
     }
-    .right-inner {
-        margin: 20px auto auto 30px;
+    .right-in1:last-child{
+        margin-bottom: 10px;
     }
 }

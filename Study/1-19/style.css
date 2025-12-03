@@ -48,11 +48,8 @@
     width: 250px;
     height: 100%;
     background-color: #c2ffc8;
-}
-.right-inner {
-    width: 150px;
-    /*height: 170px; 高さが変わってもいいよう削除 */
-    margin:40px 60px 40px 40px;
+    padding: 40px 60px 40px 40px;
+    box-sizing:border-box; /* paddingとborderを幅(width)と高さ(height)に含める */
 }
 .right-in1 {
     width: 140px;
@@ -60,6 +57,9 @@
     margin-bottom: 10px;
     background-color: #f89c9c;
     border:5px solid white;
+}
+.right-in1:last-child{
+    margin-bottom: 0px;
 }
 
 /* footer */

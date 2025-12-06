@@ -22,7 +22,7 @@ public class Task2_6 {
         
 
         // ③下記の処理について、何をしているのかコメントを記入してください
-        // double型の hogeDouble という変名前の数を宣言、値「0.8」で初期化
+        // double型の hogeDouble という名前の変数を宣言し、値「0.8」で初期化
         double hogeDouble = 0.8;
 
 

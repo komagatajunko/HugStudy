@@ -25,8 +25,8 @@ public class Task2_15 {
         bike2.stop();
         
         // ④ bike1とbike2のtypeを変更する(出力結果通りに)
-        bike1.type = "250cc";
-        bike2.type = "200cc";
+        bike1.type = "250cc";  // デフォルトのままだから変更不要？
+        bike2.type = "250cc";  // デフォルトのままだから変更不要？
        
 
         System.out.println("car1は" + red + "色で" + bike1.type + "タイプです。 現在" + bike1.check());

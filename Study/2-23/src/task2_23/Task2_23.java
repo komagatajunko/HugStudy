@@ -3,7 +3,6 @@ package task2_23;
 import java.util.ArrayList;
 
 import constants.Constants;
-import language.Student;
 import person.Person;
 
 public class Task2_23 {
@@ -16,7 +15,7 @@ public class Task2_23 {
         //引数には1:山田太郎 2:Java を入れて下さい。
         //また「Java」は、Constants.javaのものを扱って下さい。
 
-        Student yamada = new Student("山田太郎", Constants.LANGUAGE_JAVA);
+        Person yamada = new Person("山田太郎", Constants.LANGUAGE_JAVA);
         persons.add(yamada);
         
         //②作成した変数「yamada」を利用し名前を表示して下さい。
@@ -28,7 +27,7 @@ public class Task2_23 {
         //引数には1:石谷花子 2:HTML を入れて下さい。
         //また「HTML」は、Constants.javaのものを扱って下さい。
         
-        Student ishitani = new Student("石谷花子", Constants.LANGUAGE_HTML);
+        Person ishitani = new Person("石谷花子", Constants.LANGUAGE_HTML);
         persons.add(ishitani);
         
         //④作成した変数「ishitani」を利用し学んでいる言語を表示して下さい。
@@ -38,7 +37,7 @@ public class Task2_23 {
         //⑤「〇〇が△△を学んでいます」という表示で山田さん、石谷さんが何を学んでいるか出力して下さい。
         
         for(int i=0; i < persons.size(); i++) {
-            persons.get(i).studyLanguage();
+            System.out.println(persons.get(i).getName()  + "は、" + persons.get(i).getLanguage() + "を学んでいます");
         }
         
 

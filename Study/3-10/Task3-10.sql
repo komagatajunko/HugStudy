@@ -12,8 +12,8 @@ INTERSECT
 SELECT * FROM Order_header WHERE total < 10000;
 
 -- 4. 「関東」エリアの全店舗情報を抽出して下さい。
-SELECT * FROM SHOP WHERE areacode = 
-(SELECT areacode FROM area WHERE areaname='関東');
+SELECT * FROM shop JOIN area ON shop.areacode = area.areacode
+WHERE area.areaname = '関東';
 
 -- 5. 在庫(Stocksテーブル)内の各商品の合計数量を抽出して下さい。
 SELECT goodscode, SUM(quantity) AS total FROM Stocks
@@ -29,4 +29,5 @@ JOIN area ON shop.areacode = area.areacode;
 -- 8. 「新宿」店の在庫数が10以上の商品の商品コード（GoodsCode）、商品名（GoodsName）、在庫数（quantity）を抽出して下さい。
 SELECT stocks.goodscode, goods.goodsname, quantity FROM stocks
 JOIN goods ON stocks.goodscode = goods.goodscode
-WHERE shopcode = (SELECT shopcode FROM shop WHERE shopname = '新宿');
+JOIN shop ON stocks.shopcode = shop.shopcode
+WHERE shop.shopname = '新宿' AND stocks.quantity >= 10;

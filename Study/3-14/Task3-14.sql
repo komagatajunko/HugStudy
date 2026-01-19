@@ -28,20 +28,23 @@ SELECT * FROM goods_table;
 「店舗コード='EA09'、店舗名='新宿店'、店舗名(アルファベット)='SHINJUKUTEN'、更新日='2012-08-01'」
 「店舗コード='WE03'、店舗名='梅田店'、店舗名(アルファベット)='UMEDETEN'、更新日='2013-02-01'」
 「店舗コード='WE04'、店舗名='福岡店'、店舗名(アルファベット)='FUKUOKATEN'、更新日='2014-05-01'」
-INSERT INTO store_table (store_code, store_name, store_nameAbc, update_day) VALUES ('EA09','新宿店','SHINJUKUTEN','2012-08-01');
-INSERT INTO store_table (store_code, store_name, store_nameAbc, update_day) VALUES ('WE03','梅田店','UMEDETEN','2013-02-01');
-INSERT INTO store_table (store_code, store_name, store_nameAbc, update_day) VALUES ('WE04','福岡店','FUKUOKATEN','2014-05-01');
+INSERT INTO store_table (store_code, store_name, store_nameAbc, update_day) 
+VALUES ('EA09','新宿店','SHINJUKUTEN','2012-08-01'), ('WE03','梅田店','UMEDETEN','2013-02-01'), ('WE04','福岡店','FUKUOKATEN','2014-05-01');
+
 SELECT * FROM store_table;
 
 -- 8. 在庫テーブルの在庫数が20以上の商品の在庫数を50に更新して下さい。※実行後の「データ出力」画面も貼付すること。
-UPDATE stock_table SET quantity = 50 WHERE quantity > = 20;
+UPDATE stock_table SET quantity = 50 WHERE quantity >= 20;
+
 SELECT * FROM stock_table;
 
 -- 9. 在庫テーブルの商品（'S987'）かつ、店舗（'EA01'）の在庫数を10増やす更新を行って下さい。※実行後のSELECT結果も貼付すること。
 UPDATE stock_table SET quantity = quantity + 10
 WHERE goods_code = 'S987' AND store_code = 'EA01';
+
 SELECT * FROM stock_table WHERE goods_code = 'S987' AND store_code = 'EA01';
 
 -- 10. 商品コード（'Z939'）かつ、店舗コード（'EA04'）に関連する在庫情報を在庫テーブルから削除して下さい。※実行後の「データ出力」画面も貼付すること。
 DELETE FROM stock_table WHERE goods_code = 'Z939' AND store_code = 'EA04';
+
 SELECT * FROM stock_table;
